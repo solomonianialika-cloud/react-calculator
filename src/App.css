@@ -1,31 +1,57 @@
-@import "tailwindcss";
-
-
-.calculator-container {
-  max-width: 300px;
+/* Центрируем калькулятор на странице */
+.calculator {
+  width: 320px;
   margin: 50px auto;
-  background: #939090;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 20px;
+  background-color: #1a1a1a;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
+
+/* Экран калькулятора */
 .display {
-  background: #444;
-  color: white;
+  width: 100%;
+  height: 60px;
+  background: #333;
+  color: #fff;
   font-size: 2rem;
-  text-align: right;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 15px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
-.buttons-grid {
+
+/* Сетка кнопок (вот здесь магия квадрата) */
+.buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки одинаковой ширины */
+  gap: 10px; /* Расстояние между кнопками */
 }
+
+/* Сами кнопки */
 button {
   padding: 20px;
   font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: #444;
+  color: white;
   cursor: pointer;
+  transition: background 0.2s;
 }
-.op { background: #f39c12; color: white; }
-.equals { background: #27ae60; color: white; }
+
+button:hover {
+  background: #555;
+}
+
+/* Выделяем кнопки операций и равно */
+button:nth-child(4n), button:last-child {
+  background: #ff9500;
+}
+
+button:nth-child(4n):hover {
+  background: #e68600;
+}
