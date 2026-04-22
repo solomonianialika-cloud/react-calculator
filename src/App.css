@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+
+.calculator-container {
+  max-width: 300px;
+  margin: 50px auto;
+  background: #939090;
+  padding: 20px;
+  border-radius: 15px;
+}
+.display {
+  background: #444;
+  color: white;
+  font-size: 2rem;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+button {
+  padding: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.op { background: #f39c12; color: white; }
+.equals { background: #27ae60; color: white; }
